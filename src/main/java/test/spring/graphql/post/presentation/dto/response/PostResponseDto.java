@@ -1,4 +1,4 @@
-package test.spring.graphql.presentation.dto.response;
+package test.spring.graphql.post.presentation.dto.response;
 
 import lombok.*;
 

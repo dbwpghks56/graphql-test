@@ -1,9 +1,9 @@
-package test.spring.graphql.infrastructure.repository;
+package test.spring.graphql.post.infrastructure.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import test.spring.graphql.domain.Post;
-import test.spring.graphql.domain.repository.PostRepository;
+import test.spring.graphql.post.domain.Post;
+import test.spring.graphql.post.domain.repository.PostRepository;
 
 import java.util.List;
 import java.util.Optional;

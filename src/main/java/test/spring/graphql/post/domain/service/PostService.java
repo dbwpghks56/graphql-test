@@ -1,12 +1,12 @@
-package test.spring.graphql.domain.service;
+package test.spring.graphql.post.domain.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import test.spring.graphql.domain.Post;
-import test.spring.graphql.domain.repository.PostRepository;
-import test.spring.graphql.presentation.dto.request.PostRequestDto;
-import test.spring.graphql.presentation.dto.response.PostResponseDto;
+import test.spring.graphql.post.domain.Post;
+import test.spring.graphql.post.domain.repository.PostRepository;
+import test.spring.graphql.post.presentation.dto.request.PostRequestDto;
+import test.spring.graphql.post.presentation.dto.response.PostResponseDto;
 
 import java.util.List;
 

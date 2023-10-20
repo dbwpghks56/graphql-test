@@ -1,9 +1,9 @@
-package test.spring.graphql.presentation.dto.request;
+package test.spring.graphql.post.presentation.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import test.spring.graphql.domain.Post;
+import test.spring.graphql.post.domain.Post;
 
 @Getter
 @NoArgsConstructor

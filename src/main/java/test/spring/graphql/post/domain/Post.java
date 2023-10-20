@@ -1,12 +1,11 @@
-package test.spring.graphql.domain;
+package test.spring.graphql.post.domain;
 
-import io.leangen.graphql.annotations.GraphQLQuery;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import test.spring.graphql.presentation.dto.response.PostResponseDto;
+import test.spring.graphql.post.presentation.dto.response.PostResponseDto;
 
 @Entity
 @Table(name = "tb_post")

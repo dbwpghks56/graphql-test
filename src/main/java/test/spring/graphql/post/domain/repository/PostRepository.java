@@ -1,6 +1,6 @@
-package test.spring.graphql.domain.repository;
+package test.spring.graphql.post.domain.repository;
 
-import test.spring.graphql.domain.Post;
+import test.spring.graphql.post.domain.Post;
 
 import java.util.List;
 import java.util.Optional;

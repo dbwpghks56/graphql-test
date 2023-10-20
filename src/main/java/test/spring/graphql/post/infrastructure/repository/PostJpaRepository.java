@@ -1,7 +1,7 @@
-package test.spring.graphql.infrastructure.repository;
+package test.spring.graphql.post.infrastructure.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import test.spring.graphql.domain.Post;
+import test.spring.graphql.post.domain.Post;
 
 import java.util.Optional;
 
