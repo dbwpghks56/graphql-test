@@ -1,5 +1,6 @@
 package test.spring.graphql.comment.application;
 
+import io.leangen.graphql.annotations.GraphQLArgument;
 import io.leangen.graphql.annotations.GraphQLMutation;
 import io.leangen.graphql.annotations.GraphQLQuery;
 import io.leangen.graphql.spqr.spring.annotations.GraphQLApi;
@@ -18,17 +19,17 @@ public class CommentFacade {
     private final CommentCommandUseCase commentCommandUseCase;
 
     @GraphQLQuery(name = "findByIdComment")
-    public CommentResponseDto findByIdComment(Long id) {
+    public CommentResponseDto findByIdComment(@GraphQLArgument(name = "commentId") Long id) {
         return commentCommandUseCase.findById(id);
     }
 
     @GraphQLQuery(name = "findAllByPost")
-    public List<CommentResponseDto> findAllByPost(Long postId) {
+    public List<CommentResponseDto> findAllByPost(@GraphQLArgument(name = "postId") Long postId) {
         return commentCommandUseCase.findAllByPost(postId);
     }
 
     @GraphQLMutation(name = "saveComment")
-    public CommentResponseDto save(CommentRequestDto commentRequestDto) {
+    public CommentResponseDto save(@GraphQLArgument(name = "commentRequestDto") CommentRequestDto commentRequestDto) {
         return commentCommandUseCase.save(commentRequestDto);
     }
 }
