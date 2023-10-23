@@ -34,7 +34,11 @@ public class Post {
     private List<Comment> comments;
 
     public PostResponseDto postResponseDto() {
-        return PostResponseDto.builder().id(this.id).title(this.title).build();
+        return PostResponseDto.builder()
+                .id(this.id)
+                .title(this.title)
+                .commentCnt((long) comments.size())
+                .build();
     }
 
 }

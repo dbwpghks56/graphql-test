@@ -20,22 +20,22 @@ import java.util.List;
 public class PostFacade {
     private final PostCommandUseCase postCommandUseCase;
 
-    @GraphQLQuery(name = "findById")
+    @GraphQLQuery(name = "findByIdFromPost")
     public PostResponseDto findById(@GraphQLArgument(name = "id") Long id) {
         return postCommandUseCase.findById(id);
     }
 
-    @GraphQLQuery(name = "findByTitle")
+    @GraphQLQuery(name = "findByTitleFromPost")
     public PostResponseDto findByTitle(@GraphQLArgument(name = "title") String title) {
         return postCommandUseCase.findByTitle(title);
     }
 
-    @GraphQLMutation(name = "save")
+    @GraphQLMutation(name = "savePost")
     public PostResponseDto save(@GraphQLArgument(name = "requestDto") PostRequestDto requestDto) {
         return postCommandUseCase.save(requestDto);
     }
 
-    @GraphQLQuery(name = "findAll")
+    @GraphQLQuery(name = "findAllFromPost")
     public List<PostResponseDto> findAll() {
         return postCommandUseCase.findAll();
     }

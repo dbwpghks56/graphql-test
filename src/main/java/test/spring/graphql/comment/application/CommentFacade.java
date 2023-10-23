@@ -18,13 +18,13 @@ import java.util.List;
 public class CommentFacade {
     private final CommentCommandUseCase commentCommandUseCase;
 
-    @GraphQLQuery(name = "findByIdComment")
-    public CommentResponseDto findByIdComment(@GraphQLArgument(name = "commentId") Long id) {
+    @GraphQLQuery(name = "findByIdFromComment")
+    public CommentResponseDto findByIdFromComment(@GraphQLArgument(name = "commentId") Long id) {
         return commentCommandUseCase.findById(id);
     }
 
-    @GraphQLQuery(name = "findAllByPost")
-    public List<CommentResponseDto> findAllByPost(@GraphQLArgument(name = "postId") Long postId) {
+    @GraphQLQuery(name = "findAllByPostFromComment")
+    public List<CommentResponseDto> findAllByPostFromComment(@GraphQLArgument(name = "postId") Long postId) {
         return commentCommandUseCase.findAllByPost(postId);
     }
 
