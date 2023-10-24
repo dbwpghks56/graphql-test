@@ -11,6 +11,7 @@ import org.dataloader.DataLoaderRegistry;
 import org.springframework.graphql.data.method.annotation.ContextValue;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestHeader;
+import test.spring.graphql.config.PostDataLoaderFactory;
 import test.spring.graphql.post.domain.Post;
 import test.spring.graphql.post.domain.service.PostCommandUseCase;
 import test.spring.graphql.post.presentation.dto.request.PostRequestDto;
@@ -25,7 +26,7 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 public class PostFacade {
     private final PostCommandUseCase postCommandUseCase;
-    private final DataLoaderFactory dataLoaderFactory;
+    private final PostDataLoaderFactory dataLoaderFactory;
 
     @GraphQLQuery(name = "findByIdFromPost")
     public PostResponseDto findById(
@@ -51,7 +52,7 @@ public class PostFacade {
 
     @GraphQLQuery(name = "currentFunding")
     public CompletableFuture<Long> currentFunding(@GraphQLContext Post post, @GraphQLEnvironment ResolutionEnvironment env) {
-        DataLoader<Post, Long> fundingLoader = env.dataFetchingEnvironment.getDataLoader("funding");
+        DataLoader<Post, Long> fundingLoader = env.dataFetchingEnvironment.getDataLoader("posting");
         return fundingLoader.load(post);
     }
 }
